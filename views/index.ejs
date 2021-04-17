@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="generator" content="pandoc" />
+		<meta property="og:site_name" content="Chebro's Heartbeat">
+		<meta property="og:description" content="This webpage is a live feed of when cheb last used their computer. This site is serving version <%=ver%> of heartbeat.js"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+		<link rel="stylesheet" href="/style.css">
+		<title>Chebro's Heartbeat</title>
+		<!--[if lt IE 9]>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js">
+			</script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="spacing">
+		</div>
+		<p style="text-align: center;">
+		<strong>
+			<code><u>Chebro's Digital Heartbeat</u></code>
+		</strong>
+		</p>
+		<p style="text-align: center;">
+			<code>This webpage is a live feed of when cheb last used their computer</code>
+		</p>
+		<p style="text-align: center;">
+		<code>The site is serving version <a href="https://github.com/chebro/heartbeat.js/tree/<%=ver%>"><%=ver%></a> of <a href="https://github.com/chebro/heartbeat.js">heartbeat.js</a>
+		</code>
+		</p>
+		<center>
+			<div class="spacing">
+			</div>
+			<table>
+				<colgroup>
+					<col style="width: 50%" />
+					<col style="width: 50%" />
+				</colgroup>
+				<tbody>
+					<tr class="odd">
+						<td style="text-align: right;">
+							<strong>
+								<code>Last beat</code>
+							</strong>
+						</td>
+						<td style="text-align: left;">
+							<code><%=lastBeatStr%></code>
+						</td>
+					</tr>
+					<tr class="even">
+						<td style="text-align: right;">
+							<strong>
+								<code>Relative diff</code>
+							</strong>
+						</td>
+						<td style="text-align: left;">
+							<code><%=relDiffStr%></code>
+						</td>
+					</tr>
+					<tr class="odd">
+						<td style="text-align: right;">
+							<strong>
+								<code>Longest recorded diff</code>
+							</strong>
+						</td>
+						<td style="text-align: left;">
+							<code><%=lonDiffStr%></code>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</center>
+		<div class="spacing">
+		</div>
+		<footer>
+			<div style="display: flex; justify-content: center;">
+				<div style="padding-left: 1rem; padding-right: 1rem">
+					<div class="spacing">
+					</div>
+					<p style="text-align: center;">
+					<code><a href="/privacy">privacy</a></code>
+					</p>
+				</div>
+				<div style="padding-left: 1rem; padding-right: 1rem">
+					<div class="spacing">
+					</div>
+					<p style="text-align: center;">
+					<code><a href="https://github.com/l1ving/heartbeat">inspiration</a></code>
+					</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
