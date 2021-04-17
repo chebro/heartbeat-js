@@ -20,7 +20,11 @@ app.use(cors());
 app.use('/', router);
 
 app.use((req, res) => {
-	res.status(404).send('404 Page Not Found');
+	console.log(`${new Date().toLocaleString('en-GB')} - Invalid request from ${req.ip}`);
+	res.status(404).json({
+		status: 'fail',
+		message: '404 Page Not Found'
+	});
 });
 
 app.listen(port, addr, (err) => {
