@@ -16,15 +16,13 @@ To run:
 # Setup env vars
 echo -e 'PORT=8080\nADDR=localhost' > .env
 
-AUTH='some secure token'
 # Create auth token
+AUTH='some secure token'
 echo -n $AUTH > token
 
 # Start the server
 npm start
 ```
-
-The website should be running on [localhost:8080](http://localhost:8080).
 
 To test:
 

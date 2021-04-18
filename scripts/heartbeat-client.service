@@ -1,0 +1,10 @@
+[Unit]
+Description=Runs Heatbeat Beat Ping Service
+Wants=heartbeat-client.timer
+
+[Service]
+Type=oneshot
+ExecStart=/home/chaos/Documents/scripts/private/ping.sh
+
+[Install]
+WantedBy=multi-user.target
