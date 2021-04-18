@@ -37,16 +37,6 @@ exports.getHeartBeat = (req, res) => {
 };
 
 exports.postHeartBeat = (req, res) => {
-	/* TODO: Auth verification 
-	if(req.pass != process.env.PASS) {
-		res
-			.status(403)
-			.json({
-				status: 'fail',
-				reason: 'unauthorized'
-			})
-	}
-	*/
 	let beatDiff = Date.now() - hb.lastBeat;
 	
 	if(beatDiff > hb.longestDiff) {
@@ -56,6 +46,11 @@ exports.postHeartBeat = (req, res) => {
 	hb.lastBeat = Date.now();
 
 	/* On successful beat, update hb.json */
+	fs.writeFile(
+		hbPath,
+		JSON.stringify(hb),	err => {
+			if (err) throw err;
+		});	
 	
 	console.log(`${new Date().toLocaleString('en-GB')} - Successful beat from ${req.ip}`);
 	

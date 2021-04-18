@@ -17,6 +17,12 @@ app.use(express.static('./views'));
 app.use(express.json());
 app.use(cors());
 
+app.use((req, res, next) => {
+	if(req.headers['x-real-ip'])
+		req.ip = req.headers['x-real-ip'];
+	next();
+});
+
 app.use('/', router);
 
 app.use((req, res) => {
