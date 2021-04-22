@@ -19,14 +19,14 @@ app.use(cors());
 
 app.use((req, res, next) => {
 	if(req.headers['x-real-ip'])
-		req.ip = req.headers['x-real-ip'];
+		req.ipReal = req.headers['x-real-ip'];
 	next();
 });
 
 app.use('/', router);
 
 app.use((req, res) => {
-	console.log(`${new Date().toLocaleString('en-GB')} - Invalid request from ${req.ip}`);
+	console.log(`${new Date().toLocaleString('en-GB')} - Invalid request from ${req.ipReal}`);
 	res.status(404).json({
 		status: 'fail',
 		message: '404 Page Not Found'

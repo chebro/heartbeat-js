@@ -52,7 +52,7 @@ exports.postHeartBeat = (req, res) => {
 			if (err) throw err;
 		});	
 	
-	console.log(`${new Date().toLocaleString('en-GB')} - Successful beat from ${req.ip}`);
+	console.log(`${new Date().toLocaleString('en-GB')} - Successful beat from ${req.ipReal}`);
 	
 	res
 		.status(200)
