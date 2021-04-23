@@ -26,7 +26,7 @@ app.use((req, res, next) => {
 app.use('/', router);
 
 app.use((req, res) => {
-	console.log(`${new Date().toLocaleString('en-GB')} - Invalid request from ${req.ipReal}`);
+	console.log(`${new Date().toLocaleString('en-GB')} - Invalid request from ${req.ipReal} - ${req.originalUrl}`);
 	res.status(404).json({
 		status: 'fail',
 		message: '404 Page Not Found'
