@@ -18,6 +18,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use((req, res, next) => {
+	req.ipReal = req.ip;
 	if(req.headers['x-real-ip'])
 		req.ipReal = req.headers['x-real-ip'];
 	next();
