@@ -1,6 +1,6 @@
 # heartbeat.js
 
-A webpage that periodically updates the time I've used my computer, a digital heartbeat. This project is a javascript spin-off of [l1ving/heartbeat](https://github.com/l1ving/heartbeat).
+A webpage that shows the timestamp when I'd last used my computer. This project is a javascript spin-off of [l1ving/heartbeat](https://github.com/l1ving/heartbeat).
 
 To install:
 
