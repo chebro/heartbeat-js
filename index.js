@@ -19,22 +19,25 @@ app.use(cors());
 
 app.use((req, res, next) => {
 	req.ipReal = req.ip;
-	if(req.headers['x-real-ip'])
-		req.ipReal = req.headers['x-real-ip'];
+	if (req.headers['x-real-ip']) req.ipReal = req.headers['x-real-ip'];
 	next();
 });
 
 app.use('/', router);
 
 app.use((req, res) => {
-	console.log(`${new Date().toLocaleString('en-GB')} - Invalid request from ${req.ipReal} - ${req.originalUrl}`);
+	console.log(
+		`${new Date().toLocaleString('en-GB')} - Invalid request from ${req.ipReal} - ${
+			req.originalUrl
+		}`
+	);
 	res.status(404).json({
 		status: 'fail',
-		message: '404 Page Not Found'
+		message: '404 Page Not Found',
 	});
 });
 
-app.listen(port, addr, (err) => {
-	if(err) throw err;
+app.listen(port, addr, err => {
+	if (err) throw err;
 	console.log(`process bound to ${addr}:${port}`);
 });

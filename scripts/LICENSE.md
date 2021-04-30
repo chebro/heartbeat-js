@@ -1,4 +1,3 @@
-
 Copyright (c) 2020-2021, Liv <~@l1v.in>, Cheb
 
 Permission to use, copy, modify, and/or distribute this software for any
