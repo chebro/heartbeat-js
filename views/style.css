@@ -131,6 +131,16 @@ table {
 .center code {
 	white-space: nowrap;
 }
+.center table {
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.center code {
+  white-space: nowrap;
+}
 table caption {
 	margin-bottom: 0.75em;
 }
