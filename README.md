@@ -33,6 +33,6 @@ curl -X POST -H "Auth: $AUTH" localhost:8080
 ## TODO
 
 - [x] Authorization for POST requests
-- [ ] Add tls certs
-- [ ] Add Husky pre-commit hooks for auto formatting
+- [x] Add tls certs
+- [x] Add husky pre-commit hooks for auto formatting
 - [ ] Update README
