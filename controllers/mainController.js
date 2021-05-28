@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { formattedTimeString, epochToDateTimeString } = require('../utils/timeutil.js');
+const { updatePlot } = require('../utils/plotutil.js');
 
 const hbPath = path.join(__dirname, '../hb.json');
 const ver = require('child_process').execSync('git rev-parse --short HEAD').toString().trim();
@@ -32,6 +33,9 @@ exports.getHeartBeat = (req, res) => {
 };
 
 exports.postHeartBeat = (req, res) => {
+	//updatePlot(req.body.device);
+	updatePlot();
+
 	let beatDiff = Date.now() - hb.lastBeat;
 
 	if (beatDiff > hb.longestDiff) {

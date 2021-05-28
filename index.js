@@ -5,7 +5,8 @@ const dotenv = require('dotenv');
 const express = require('express');
 const app = express();
 
-const router = require('./routes/router');
+const mainRouter = require('./routes/mainRouter');
+const statsRouter = require('./routes/statsRouter');
 
 dotenv.config('./.env');
 const port = process.env.PORT;
@@ -13,17 +14,18 @@ const addr = process.env.ADDR;
 
 app.set('view engine', 'ejs');
 
-app.use(express.static('./views'));
+app.use(express.static('./public'));
 app.use(express.json());
 app.use(cors());
 
-app.use((req, res, next) => {
+app.use((req, _res, next) => {
 	req.ipReal = req.ip;
 	if (req.headers['x-real-ip']) req.ipReal = req.headers['x-real-ip'];
 	next();
 });
 
-app.use('/', router);
+app.use('/', mainRouter);
+app.use('/stats', statsRouter);
 
 app.use((req, res) => {
 	console.log(
