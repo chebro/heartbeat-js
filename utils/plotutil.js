@@ -6,7 +6,6 @@ let plot = new Array(60).fill(0);
 //exports.updatePlot = device => {
 //console.log(device);
 exports.updatePlot = () => {
-	console.log(hb.lastBeat);
 	plot = plot.concat(Array(Math.floor((Date.now() - hb.lastBeat) / 60000)).fill(0));
 	plot = plot.concat([1]);
 	//console.log(asciichart.plot(plot, { colors: [asciichart.blue] }));
