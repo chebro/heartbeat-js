@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<meta name="generator" content="pandoc" />
 		<meta property="og:site_name" content="Chebro's Heartbeat">
-		<meta property="og:description" content="This webpage is a live feed of when cheb last used their computer. The site is serving version <%=ver%> of heartbeat.js"/>
+		<meta property="og:description" content="This webpage is a live feed of when cheb last used their computer. The site is serving version <%=version%> of heartbeat.js"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 		<link rel="stylesheet" href="/css/style.css">
 		<title>
@@ -17,6 +17,26 @@
 	</head>
 	<body>
 		<div class="spacing"></div>
-		<pre><%=graph%></pre>
+		<h3 id="ping-stats" style="text-align: center"><strong><code><u>heartbeat stats</u></code></strong></h3>
+		<pre class="graph"><%=graph%></pre>
+		<p style="text-align: center"><code>heartbeat stats over the last 60 min</code></p>
+		<!--<p style="text-align: center"><code>1 = beat; 0 = null</code></p>-->
+		<div class="spacing"></div>
+		<div class="spacing"></div>
+		<div class="center">
+			<h3 id="system-info" style="text-align: center"><strong><code><u>system info</u></code></strong></h3>
+			<table>
+				<tbody>
+				<tr class="odd">
+					<td style="text-align: right;"><strong><code>os</code></strong></td>
+					<td style="text-align: left;"><code><%=osname%></code></td>
+				</tr>
+				<tr class="even">
+					<td style="text-align: right;"><strong><code>uptime</code></strong></td>
+					<td style="text-align: left;"><code><%=uptime%></code></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
 	</body>
 </html>

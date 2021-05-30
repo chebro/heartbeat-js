@@ -103,6 +103,9 @@ pre code {
 	padding: 0;
 	overflow: visible;
 }
+pre.graph {
+	line-height: 1.25 !important;
+}
 .sourceCode {
 	background-color: transparent;
 	overflow: visible;
@@ -132,14 +135,14 @@ table {
 	white-space: nowrap;
 }
 .center table {
-  width: -moz-fit-content;
-  width: -webkit-fit-content;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
+	width: -moz-fit-content;
+	width: -webkit-fit-content;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
 }
 .center code {
-  white-space: nowrap;
+	white-space: nowrap;
 }
 table caption {
 	margin-bottom: 0.75em;

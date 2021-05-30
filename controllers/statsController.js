@@ -1,14 +1,18 @@
-const ver = require('child_process').execSync('git rev-parse --short HEAD').toString().trim();
 const { getPlot } = require('../utils/plotutil.js');
+const { osname, version } = require('../utils/constants.js');
+const exec = require('util').promisify(require('child_process').exec);
 
-exports.getDeviceStats = (req, res) => {
-	// res.status(200).render('stats');
-	res
-		.status(200)
-		//.send(getChart());
-		.render('stats', { ver, graph: getPlot() });
+const uptime = () => {
+	return exec('uptime -p | cut -d"," -f"1-3"');
 };
 
-exports.getSleepStats = (req, res) => {
-	res.status(200).render('privacy');
+exports.getDeviceStats = (req, res) => {
+	try {
+		uptime().then(data => {
+			let uptime = data.stdout;
+			res.status(200).render('stats', { version, osname, uptime, graph: getPlot() });
+		});
+	} catch (err) {
+		console.log(err);
+	}
 };
