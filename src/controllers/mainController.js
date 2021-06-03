@@ -1,10 +1,7 @@
 const { hb, version } = require('../utils/constants.js');
 const { updatePlot } = require('../utils/plotutil.js');
-const { createHb, updateHb } = require('../utils/fileutil.js');
+const { updateHb } = require('../utils/fileutil.js');
 const { formattedTimeString, epochToDateTimeString } = require('../utils/timeutil.js');
-
-/* Create hb.json if missing */
-createHb();
 
 exports.getHeartBeat = (req, res) => {
 	res.status(200).render('index', {

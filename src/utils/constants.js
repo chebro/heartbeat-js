@@ -1,5 +1,9 @@
 const path = require('path');
 const { execSync } = require('child_process');
+const { createHb } = require('./fileutil.js');
+
+/* Create hb.json if missing */
+createHb();
 
 exports.hb = require(path.join(__dirname, '../hb.json'));
 

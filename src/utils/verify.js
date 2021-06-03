@@ -1,7 +1,8 @@
+const path = require('path');
 const fs = require('fs');
 
 module.exports = (req, res, next) => {
-	fs.readFile('token', 'utf-8', (err, data) => {
+	fs.readFile(path.join(__dirname, '../token'), 'utf-8', (err, data) => {
 		if (err) throw err;
 		if (data === req.headers.auth) {
 			next();
