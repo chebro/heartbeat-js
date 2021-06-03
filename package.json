@@ -23,15 +23,18 @@
 	"devDependencies": {
 		"dotenv": "^8.2.0",
 		"eslint": "^7.24.0",
-		"husky": "^6.0.0",
 		"nodemon": "^2.0.7",
 		"prettier": "^2.3.0",
-		"pretty-quick": "^3.1.0"
+		"pretty-quick": "^3.1.0",
+		"simple-git-hooks": "^2.4.1"
 	},
 	"dependencies": {
 		"asciichart": "^1.5.25",
 		"cors": "^2.8.5",
 		"ejs": "^3.1.6",
 		"express": "^4.17.1"
+	},
+	"simple-git-hooks": {
+		"pre-commit": "npx pretty-quick --staged"
 	}
 }
