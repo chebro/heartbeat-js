@@ -8,9 +8,9 @@ createHb();
 
 exports.getHeartBeat = (req, res) => {
 	res.status(200).render('index', {
-		lastBeatStr: formattedTimeString(Date.now() - hb.lastBeat),
-		relDiffStr: formattedTimeString(hb.longestDiff),
-		lonDiffStr: epochToDateTimeString(hb.lastBeat),
+		lastBeatStr: epochToDateTimeString(hb.lastBeat),
+		relDiffStr: formattedTimeString(Date.now() - hb.lastBeat),
+		lonDiffStr: formattedTimeString(hb.longestDiff),
 		version,
 	});
 };
