@@ -1,6 +1,5 @@
 node_modules
 hb.json
-token
 .env
 .eslintrc.json
 .test
