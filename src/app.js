@@ -1,7 +1,6 @@
 #!/bin/node
 
 const path = require('path');
-const cors = require('cors');
 const express = require('express');
 const app = express();
 
@@ -13,7 +12,6 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
-app.use(cors());
 
 app.use((req, _res, next) => {
 	req.ipReal = req.ip;
