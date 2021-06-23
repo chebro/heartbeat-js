@@ -2,14 +2,16 @@ const asciichart = require('asciichart');
 const { hb } = require('../utils/constants.js');
 
 let plot = new Array(60).fill(0);
+let lock = false;
 
-//exports.updatePlot = device => {
-//console.log(device);
 exports.updatePlot = () => {
-	plot = plot.concat(Array(Math.floor((Date.now() - hb.lastBeat) / 60000)).fill(0));
-	if ((Date.now() - hb.lastBeat) / 60000 > 1) plot = plot.concat([1]);
-	//console.log(asciichart.plot(plot, { colors: [asciichart.blue] }));
-	if (plot.length > 60) plot.splice(0, plot.length - 60);
+	if (Date.now() - hb.lastBeat / 60000 > 1) lock = false;
+	if (!lock) {
+		plot = plot.concat(Array(Math.floor((Date.now() - hb.lastBeat) / 60000)).fill(0));
+		plot = plot.concat([1]);
+		if (plot.length > 60) plot.splice(0, plot.length - 60);
+		lock = true;
+	}
 };
 
 exports.getPlot = () => {
