@@ -3,7 +3,7 @@ module.exports = (req, res, next) => {
 		next();
 	} else {
 		console.log(
-			`${new Date().toLocaleString('en-GB')} - Incorrect token from ${req.ipReal} - ${
+			`${new Date().toLocaleString('en-GB')} - Incorrect token from ${req.ip} - ${
 				req.headers.auth
 			}`
 		);
