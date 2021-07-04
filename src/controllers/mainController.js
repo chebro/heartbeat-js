@@ -24,7 +24,7 @@ exports.postHeartBeat = (req, res) => {
 	hb.lastBeat = Date.now();
 
 	updateHb(hb);
-	console.log(`${new Date().toLocaleString('en-GB')} - Successful beat from ${req.ipReal}`);
+	console.log(`${new Date().toLocaleString('en-GB')} - Successful beat from ${req.ip}`);
 
 	res.status(200).json({
 		status: 'success',
