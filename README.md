@@ -3,8 +3,8 @@
 A webpage that displays the most recent heartbeat (ping) received by the server (from a client).
 
 ```
-├─ src    - express.js web app
-└─ client - systemd timer modules for clients
+├─ src     - express.js web app
+└─ scripts - systemd timer modules for clients
 ```
 
 Install heartbeat.js:
