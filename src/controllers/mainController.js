@@ -3,7 +3,7 @@ const { updatePlot } = require('../utils/plotutil.js');
 const { updateHb } = require('../utils/fileutil.js');
 const { formattedTimeString, epochToDateTimeString } = require('../utils/timeutil.js');
 
-exports.getHeartBeat = (req, res) => {
+exports.getHeartBeat = (_req, res) => {
 	res.status(200).render('index', {
 		lastBeatStr: epochToDateTimeString(hb.lastBeat),
 		relDiffStr: formattedTimeString(Date.now() - hb.lastBeat),
@@ -12,7 +12,7 @@ exports.getHeartBeat = (req, res) => {
 	});
 };
 
-exports.getPrivacyPol = (req, res) => {
+exports.getPrivacyPol = (_req, res) => {
 	res.status(200).render('privacy', { version });
 };
 
