@@ -25,8 +25,8 @@ exports.epochToDateTimeString = lb => {
 	});
 	let date = new Date(lb).toLocaleDateString([], {
 		day: '2-digit',
-		month: '2-digit',
-		year: '2-digit',
+		month: 'short',
+		year: 'numeric',
 	});
-	return `${time} ${date}`;
+	return `${date} ${time}`;
 };
