@@ -1,6 +1,14 @@
+@font-face {
+	font-family: 'Iosevka Minified';
+	src: url('/fonts/IosevkaMinified.woff2') format('woff2'),
+		url('/fonts/IosevkaMinified.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
 html {
 	line-height: 1.5;
-	font-family: Georgia, serif;
+	font-family: Iosevka Minified, monospace;
 	font-size: 18px;
 	color: #2e3440;
 	background-color: #eceff4;
@@ -91,7 +99,7 @@ blockquote {
 	color: #606060;
 }
 code {
-	font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+	font-family: Iosevka Minified, monospace;
 	font-size: 85%;
 	margin: 0;
 }
