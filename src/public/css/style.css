@@ -136,3 +136,8 @@ div.hanging-indent {
 ul.task-list {
 	list-style: none;
 }
+@media (max-width: 600px) {
+	body {
+		font-size: 0.85em;
+	}
+}
