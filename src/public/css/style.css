@@ -6,82 +6,21 @@
 	font-style: normal;
 	font-display: block;
 }
-html {
-	line-height: 1.5;
-	font-family: Iosevka Minified, monospace;
-	font-size: 18px;
-	color: #2e3440;
-	background-color: #eceff4;
-}
 body {
-	margin: 0 auto;
-	max-width: 45em;
-	padding-left: 50px;
-	padding-right: 50px;
-	padding-top: 50px;
-	padding-bottom: 50px;
-	hyphens: auto;
-	word-wrap: break-word;
-	text-rendering: optimizeLegibility;
-	font-kerning: normal;
+	font-family: 'Iosevka Minified';
+	text-align: center;
+	margin: 5rem auto;
+	max-width: 40rem;
+	padding: 1rem;
 }
 .spacing {
 	margin-top: 7em;
 }
-@media (max-width: 600px) {
-	body {
-		font-size: 0.75em;
-		padding: 1.5em;
-	}
-	.spacing {
-		margin-top: 5em;
-	}
-}
-@media print {
-	body {
-		background-color: transparent;
-		color: #2e3440;
-		font-size: 12pt;
-	}
-	p,
-	h2,
-	h3 {
-		orphans: 3;
-		widows: 3;
-	}
-	h2,
-	h3,
-	h4 {
-		page-break-after: avoid;
-	}
-}
 p {
 	margin: 1em 0;
 }
-a {
-	color: #5e81ac;
-}
-a:visited {
-	color: #5e81ac;
-}
 img {
 	max-width: 100%;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin-top: 1.4em;
-}
-h5,
-h6 {
-	font-size: 1em;
-	font-style: italic;
-}
-h6 {
-	font-weight: normal;
 }
 ol,
 ul {
@@ -100,7 +39,6 @@ blockquote {
 }
 code {
 	font-family: Iosevka Minified, monospace;
-	font-size: 85%;
 	margin: 0;
 }
 pre {
